@@ -1,0 +1,1106 @@
+{
+	"info": {
+		"_postman_id": "87fe17f5-8131-966d-7a97-9e677374d887",
+		"name": "Microservices Tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RestFul Services",
+			"description": "",
+			"item": [
+				{
+					"name": "User",
+					"description": "",
+					"item": [
+						{
+							"name": "GetAllUsers",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Single User",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users/100/posts",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"100",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add User",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Sheldon\",\n    \"dateOfBirth\": \"1978-02-05T14:06:16.872+0000\"\n}"
+								},
+								"url": {
+									"raw": "{{RootUrl}}/users",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users/102",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"102"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Posts",
+					"description": "",
+					"item": [
+						{
+							"name": "GetPostById",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users/post/200",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"post",
+										"200"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Posts",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"description\": \"My third post\"\n    }"
+								},
+								"url": {
+									"raw": "{{RootUrl}}/users/100/posts",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"100",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Post",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users/100/posts/200",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"100",
+										"posts",
+										"200"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Post By UserId",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users/100/posts",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"100",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllPostForUserId",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/users/100/posts",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"users",
+										"100",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Test",
+					"description": "",
+					"item": [
+						{
+							"name": "Test Messages",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "fr"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/test-message",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"test-message"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test filtering",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/filtering",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"filtering"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test filtering list",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/filtering-list",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"filtering-list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Versioning",
+					"description": "",
+					"item": [
+						{
+							"name": "URI PersonV1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/v1/person",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"v1",
+										"person"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "URI PersonV2",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/v2/person",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"v2",
+										"person"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Param PersonV1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/person/param?version=1",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"person",
+										"param"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Param PersonV2",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/person/param?version=2",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"person",
+										"param"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Header PersonV1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-VERSION",
+										"value": "1"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/person/header",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"person",
+										"header"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Header PersonV2",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-VERSION",
+										"value": "2"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/person/header",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"person",
+										"header"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produces PersonV2",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.test.app.v2+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/person/produces",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"person",
+										"produces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produces PersonV1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.test.app.v1+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/person/produces",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"person",
+										"produces"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Spring Cloud",
+			"description": "",
+			"item": [
+				{
+					"name": "Limit Service",
+					"description": "",
+					"item": [
+						{
+							"name": "Limits",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{RootUrl}}/limits",
+									"host": [
+										"{{RootUrl}}"
+									],
+									"path": [
+										"limits"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
