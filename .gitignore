@@ -8,3 +8,4 @@ target/
 ## Directory-based project format:
 .idea/
 .metadata/
+/.recommenders/
