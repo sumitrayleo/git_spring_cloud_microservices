@@ -1,7 +1,5 @@
 package com.tutorial.spring.cloud.currencyexchangeservice;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +14,15 @@ public class CurrencyExchangeController {
     @Autowired
     private Environment environment;
     
+    @Autowired
+    private CurrencyExchangeRepository currencyExchangeRepository;
+    
     @GetMapping("/from/{from}/to/{to}")
     public CurrencyExchange retrieveCurrencyExchange(@PathVariable String from, @PathVariable String to) {
-        CurrencyExchange currencyExchange = new CurrencyExchange(1000L, from, to, BigDecimal.valueOf(65L));
+        CurrencyExchange currencyExchange = currencyExchangeRepository.findByFromAndTo(from, to);
+        if(currencyExchange == null) {
+            throw new CurrencyNotFoundException(String.format("Currency %s and %s may not be valid", from, to));
+        }
         currencyExchange.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
         
         return currencyExchange;
