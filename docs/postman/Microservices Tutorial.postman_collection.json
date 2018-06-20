@@ -1086,16 +1086,126 @@
 								"header": [],
 								"body": {},
 								"url": {
-									"raw": "{{RootUrl}}/limits",
+									"raw": "http://localhost:8080/limits",
+									"protocol": "http",
 									"host": [
-										"{{RootUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
 										"limits"
 									]
 								}
 							},
 							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Currency Exchange",
+					"description": "",
+					"item": [
+						{
+							"name": "Currency Exchange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8000/currency-exchange/from/USD/to/INR",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"currency-exchange",
+										"from",
+										"USD",
+										"to",
+										"INR"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "100e1a6c-8bbf-479d-b1a3-6e283f65df7f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0466b0f9-551e-4b8a-8d16-14356f3745dc",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Currency Conversion",
+					"description": "",
+					"item": [
+						{
+							"name": "Currency Conversion",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8100/currency-converter/from/USD/to/INR/quantity/500",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"currency-converter",
+										"from",
+										"USD",
+										"to",
+										"INR",
+										"quantity",
+										"500"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "100e1a6c-8bbf-479d-b1a3-6e283f65df7f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0466b0f9-551e-4b8a-8d16-14356f3745dc",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						}
 					],
 					"_postman_isSubFolder": true
