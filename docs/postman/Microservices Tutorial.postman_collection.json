@@ -1184,6 +1184,32 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Currency Conversion Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8100/currency-converter-feign/from/USD/to/INR/quantity/500",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"currency-converter-feign",
+										"from",
+										"USD",
+										"to",
+										"INR",
+										"quantity",
+										"500"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"event": [

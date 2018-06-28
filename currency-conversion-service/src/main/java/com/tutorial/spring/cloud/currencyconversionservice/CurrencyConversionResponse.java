@@ -3,7 +3,7 @@ package com.tutorial.spring.cloud.currencyconversionservice;
 import java.math.BigDecimal;
 
 public class CurrencyConversionResponse {
-    
+
     private Long id;
     private String from;
     private String to;
@@ -11,11 +11,11 @@ public class CurrencyConversionResponse {
     private BigDecimal quantity;
     private BigDecimal totalCalculatedValue;
     private int port;
-    
+
     public CurrencyConversionResponse() {
-        
+
     }
-    
+
     public CurrencyConversionResponse(Long id, String from, String to, BigDecimal conversionMultiple, BigDecimal quantity,
                     BigDecimal totalCalculatedValue, int port) {
         super();
@@ -83,5 +83,5 @@ public class CurrencyConversionResponse {
     public void setPort(int port) {
         this.port = port;
     }
-    
+
 }
