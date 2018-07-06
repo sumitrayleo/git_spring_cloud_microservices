@@ -1098,6 +1098,27 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Actuator Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -1186,7 +1207,7 @@
 							"response": []
 						},
 						{
-							"name": "Currency Conversion Copy",
+							"name": "Currency Conversion w Feign ",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -1199,6 +1220,33 @@
 									],
 									"port": "8100",
 									"path": [
+										"currency-converter-feign",
+										"from",
+										"USD",
+										"to",
+										"INR",
+										"quantity",
+										"500"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Currency Conversion Zuul",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8765/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/500",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"currency-conversion-service",
 										"currency-converter-feign",
 										"from",
 										"USD",
